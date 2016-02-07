@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour {
 		if(active)
 		{
 			var newtransform= transform;
-			Instantiate(prefabs[Random.Range(0,prefabs.Length)],newtransform.position,Quaternion.identity);
+			GameObjectUtil.Instantiate(prefabs[Random.Range(0,prefabs.Length)],newtransform.position);
 			ResetDelay();
 		}
 		StartCoroutine (EnemyGenerater());
